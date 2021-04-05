@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+ *, *::after, *::before{
+     box-sizing: border-box;
+ }
+
+ html, body{
+     margin: 0;
+     padding: 0;
+     scroll-behavior: smooth;
+     background-color: black;
+ }
+/* 
+ *{
+   border: 1px solid red;
+ }
+  */
+
+ input, button{
+     border:0;
+     margin:0;
+     
+ } 
+
+@media only screen and (min-width: 150px){
+    :root{
+        --label-fnt-size:1.6rem;
+        --input-fnt-size:1rem;
+    }
+  
+
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
+    .form-container{
+        margin:auto;
+        max-width: 956px;
+        padding:1rem 0;
+    }
+
+    .form{
+        background-color: white;
+        display: grid;
+        place-content: center;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: auto;
+        padding:2rem;
+
+    }
+  
+    .title{
+        text-align:center;
+        font-size: var(--label-fnt-size);
+        color:rgb(73, 80, 87);
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+    label{
+        display:block;
+        font-size: var(--label-fnt-size);
+        /* background-color:teal; */
+        font-weight: 500;
+        color:rgb(73, 80, 87);
+    }
+
+    .form-inputs{
+        display:grid;
+        grid-template-columns:repeat(1, minmax(100px, 1fr));
+        gap:1rem;
+    }
+    input{
+        font-size:var(--input-fnt-size);
+        padding:.5rem;
+        background-color: rgb(222, 226, 230);    
+        border-radius: 5px;
+
+    }
+    input::placeholder{
+        color:rgb(156, 156, 156);
+    }
+
+    .form-item:nth-child(6){
+      display:flex;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+     
+    .agreement{
+       font-size:1rem;
+       text-align: left;
+       /* background:red; */
+       flex:1;
+       margin-left:.5rem;
+      }
+
+      .submit{
+        font-family: 'Roboto', sans-serif;
+        font-size: var(--label-fnt-size);
+        padding:.8rem 0 ;
+        text-align: center;
+        background-color: rgb(251, 133, 0);
+        font-weight: 500;
+        margin-top: 2rem;
+        border-radius: 5px;
+      }
+
+  
+}
+
+@media only screen and (min-width:768px){
+    :root{
+        --label-fnt-size:1.8rem;
+        --input-fnt-size:1.2rem;
+    }
+  body{
+      background:black;
+  }
+    .form-container{
+        max-width: 900px;
+    }
+
+    .form-inputs{
+        display:grid;
+        grid-template-columns:repeat(2, minmax(100px, 1fr));
+        gap: 1rem 2rem;
+    }
+    input{
+        font-size:var(--input-fnt-size);
+    }
+    .street{
+        grid-column: 1/-1;
+    }
+    .submit{
+        font-size: var(--input-fnt-size);
+        width:50%;
+        justify-self:center;
+        font-weight: 500;
+      }
+     
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
